@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Isa">
+    <title>Mi Portafolio Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mi Portafolio</h1>
+        <nav>
+            <a href="#biografia">Biografía</a> 
+            <a href="#conocimientos">Conocimientos</a>  
+            <a href="#habilidades">Habilidades</a> 
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>   
+        <section id="biografia">
+            <h2>Sobre Mí</h2>
+            <picture>
+                <img src="perfil.jpg" alt="Foto de perfil">
+            </picture>
+            <p>Hola, Soy Eduardo Isaías Morán Cabrera, soy un Estudiante de Ingenieria en Ciencias de la computacion, apasionado por la tecnología.</p>
+        </section>
+
+  
+        <section id="conocimientos">
+            <h2>Conocimientos</h2>
+            <p>Lenguajes y nivel de conocimiento en Programación</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lenguajes</th>
+                        <th>Nivel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Java,C#,C++,Phyton</td>
+                        <td>Medio</td>                        
+                    </tr>
+                    <tr>
+                        <td>HTML, CSS, JS</td>
+                        <td>Basico</td>                     
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Actualmente cursando Portales Web 2, BigData, Desarrollo de Softwar, ampliando mi conocimiento</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+       
+        <section id="habilidades">
+            <h2>Mis Habilidades</h2>
+            
+            <h3>Habilidades Técnicas</h3>
+            <ul>
+                <li>Programacion</li>
+                <li>Análisis de Datos con Power BI</li>
+                <li>Mantenimiento de Hardware y Sistemas</li>
+            </ul>
+        </section>
+
+   
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="formContacto" action="#" method="POST">
+                <label>Nombre:</label><br>
+                <input type="text" name="nombre" id="nombreInput" placeholder="Tu nombre" required><br><br>
+
+                <label>Asunto:</label><br>
+                <select name="asunto">
+                    <option value="contratacion">Contratación</option>
+                    <option value="proyecto">Mas información</option>
+                    <option value="soporte">Consultas</option>
+                </select><br><br>
+
+                <label>Mensaje:</label><br>
+                <textarea name="comentario" rows="4" cols="40" placeholder="Escribe tu mensaje aquí..."></textarea><br><br>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Eduardo Isaías Morán Cabrera  0801199724921</p>
+        <p>Correo: edui_moranc59@unicah.edu</p>
+        <p>Telefono: 9646-3349.</p>
+        
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
