@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografía Post-Cuántica</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        
+        :root {
+            --bulma-primary: #2b5c8f;
+            --bulma-primary-invert: #ffffff;
+            --bulma-link: #4a5d6e;   
+            --bulma-info: #6c7a89;  
+            --bulma-scheme-main: #f5f7fa; 
+        }
+
+        .custom-full-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .custom-dark-hero {
+
+            background-color: #1e2530 !important; 
+        }
+
+        @media (min-width: 1024px) {
+            .reverse-row-desktop {
+                flex-direction: row-reverse;
+            }
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href=" ">
+                    <span class="icon is-medium has-text-primary mr-2">
+                        <i class="fas fa-microchip fa-lg"></i>
+                    </span>
+                    <strong class="has-text-grey-darker">Ejercicio Bulma</strong>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarPQC">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarPQC" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">Inicio</a>
+
+
+
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-primary">
+                                <strong>Acceso SSH</strong>
+                            </a>
+                            <a class="button is-light has-text-grey">
+                                Documentación
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero custom-dark-hero is-medium">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <p class="title has-text-white is-2">Criptografía Post-Cuántica</p>
+                   
+            </div>
+        </section>
+
+        <section class="container is-max-widescreen mt-6 px-3">
+            <div class="has-text-centered mb-5">
+                <h2 class="title is-3 has-text-grey-dark">Estándares del NIST</h2>
+                <p class="subtitle is-5 has-text-grey">Esquemas de cifrado inmunes a la computación cuántica.</p>
+            </div>
+
+            <div class="columns is-multiline is-centered">
+                <div class="column is-one-third-tablet is-one-quarter-desktop">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://picsum.photos/seed/cyber1/400/300" alt="Lattice-based cryptography" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <span class="icon is-large has-text-link">
+                                        <i class="fas fa-cube fa-2x"></i>
+                                    </span>
+                                </div>
+                                <div class="media-content">
+                                    <p class="subtitle is-7 has-text-grey">Anteriormente Kyber</p>
+                                </div>
+                            </div>
+                            <div class="content is-size-7 has-text-grey">
+                                Mecanismo de encapsulamiento de clave basado en **redes euclidianas (lattices)**. Diseñado para el cifrado de clave pública general.
+                                <br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-one-third-tablet is-one-quarter-desktop">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://picsum.photos/seed/cyber2/400/300" alt="Digital Signatures" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <span class="icon is-large has-text-link">
+                                        <i class="fas fa-file-signature fa-2x"></i>
+                                    </span>
+                                </div>
+                                <div class="media-content">
+                                    <p class="subtitle is-7 has-text-grey">Anteriormente Dilithium</p>
+                                </div>
+                            </div>
+                            <div class="content is-size-7 has-text-grey">
+                                Esquema de firma digital altamente eficiente. Garantiza la autenticidad e integridad de los datos en entornos cuánticos.
+                                <br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-one-third-tablet is-one-quarter-desktop">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://picsum.photos/seed/cyber3/400/300" alt="Stateless hash cryptography" />
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <span class="icon is-large has-text-link">
+                                        <i class="fas fa-hashtag fa-2x"></i>
+                                    </span>
+                                </div>
+                                <div class="media-content">
+                                    <p class="subtitle is-7 has-text-grey">Basado en Hash</p>
+                                </div>
+                            </div>
+                            <div class="content is-size-7 has-text-grey">
+                                Firma digital basada en funciones hash sin estado (SPHINCS+). Ofrece un respaldo robusto ante imprevistos matemáticos.
+                                <br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container my-6 p-3">
+            <div class="columns reverse-row-desktop is-vcentered">
+                <div class="column">
+                    <section class="box p-5">
+                        <h3 class="title is-4 has-text-grey-dark mb-4">Inicio de sesion</h3>
+                        
+                        <div class="field">
+                            <label class="label">  </label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input class="input is-success" type="text" placeholder="Ej: node-pqc-01" value="Usuario ">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-terminal"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </div>
+                            <p class="help is-success">Ingrese su Usuario</p>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Correo Electrónico</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input class="input is-danger" type="email" placeholder="sysadmin@empresa.com" value="Correo Electrónico">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <span class="icon is-small is-right">
+                                    <i class="fas fa-triangle-exclamation"></i>
+                                </span>
+                            </div>
+                            <p class="help is-danger">Ingrese su correo electronico</p>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Contraseña</label>
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Inserte su contraseña</label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Comentarios"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <label class="checkbox">
+                                    <input type="checkbox"> Recordar Usuario
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="field is-grouped mt-4">
+                            <div class="control">
+                                <button class="button is-primary">Iniciar Sesion</button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-link is-light">Restablecer</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+                <div class="column p-0">
+                    <picture>
+                        <source srcset="https://picsum.photos/id/180/1024/1024" media="(min-width:1025px)" />
+                        <source srcset="https://picsum.photos/id/180/720/720" media="(min-width:720px)" />
+                        <img src="https://picsum.photos/id/180/480/480" class="custom-full-image card" alt="Infraestructura de servidores" />
+                    </picture>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer has-background-white-ter">
+        <nav class="level mb-6">
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Tweets</p>
+                    <p class="title has-text-link">256</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">following</p>
+                    <p class="title has-text-link">4,556k</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Followers</p>
+                    <p class="title has-text-link">1,562k</p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Likes</p>
+                    <p class="title has-text-link">1,325k</p>
+                </div>
+                
+            </div>
+        </nav>
+        
+        <div class="content has-text-centered is-size-7 has-text-grey">
+            <p>
+             https://csrc.nist.gov/projects/post-quantum-cryptography.
+                        
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
